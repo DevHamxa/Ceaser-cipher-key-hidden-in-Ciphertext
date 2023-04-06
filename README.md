@@ -1,108 +1,52 @@
 # Ceaser-cipher-key-hidden-in-Ciphertext
-**CA LAB**
 
-**Project Report**
+## Introduction:
 
-**Ceaser cipher with key hidden in Ciphertext**
+> The Caesar cipher shifts all the letters in a piece of text by a certain number of places. The key for this cipher is a number which represents the number of places for the shift. So, for example, a key 3 means “shift 3 places” and a key 12 means “shift 12 places”. Note that a key 0 means “do not shift” and a key 25 can either mean “shift 25 places” or “shift one place backwards”. 
 
-![Logo
+> ***For example***, the word “CEASER” with a shift 10 becomes “MOKCOB”<a name="_hlk75431326"></a>.
 
-Description automatically generated](Aspose.Words.cb64041c-7963-4b27-b6bf-9fe1b2d5f916.001.png)
+> Ceaser cipher is a ***symmetric encryption***, there is only one key, and all communicating parties use the same (secret) key for both encryption and decryption of the data. 
 
+## Methodology:
 
+> ***Ceaser cipher with key hidden in*** ***ciphertext*** is an ***8086-assembly language*** program, in which we perform the modified version Ceaser cipher. The modification is that we encrypt and hide the key itself somewhere in the Ciphertext. This ensures that only the person who has the same program that was used for encrypting the plaintext can decrypt the cipher text.
 
-|**Submitted By**       |**Registration no**|
-| :- | :- |
-|`      `Muhammad Abdullah Zahid|19-CS-54|
-|`      `Muhammad Hamza Fayyaz|19-CS-20|
-|`      `Saad Zafar|19-CS-12|
-|`      `Sohail Asghar|19-CS-18|
-|`      `Ali Sher|19-CS-37|
+> The key can be hidden anywhere choose by us, it can be start, end, middle, or one digit in start and one digit at the end.
 
+## Design:
 
-**Submitted To:**
+> After creating the main structure of the program and dividing it in to two segments.
 
-Miss Qurat-ul-Ain
-
-**INDEX:**
-
-**Project Report**
-
-
-
-|**Sr. No.**|**Topics**|
-| :-: | :- |
-|1|Abstract|
-|2|Introduction|
-|3|<p></p><p>Methodology </p>|
-|4|Design|
-
-
-
-
-
-**Ceaser cipher with key hidden in Ciphertext**
-
-1. **Abstract:**
-**
-`	`The technique of encoding information is known as ***encryption***. This procedure turns plaintext, or the original representation of the data, into ciphertext, or an alternate representation of the data. Only authorized parties should be able to decrypt a <a name="_hlk75431277"></a>ciphertext back to plaintext and access the original data. Encryption ensures that only the intended receiver or the rightful data owner may read messages or data in transit. This stops unauthorized individuals from accessing critical information.
-
-![Symmetric vs. Asymmetric Encryption - What are differences?](Aspose.Words.cb64041c-7963-4b27-b6bf-9fe1b2d5f916.002.png)
-
-
-1. **Introduction:**
-
-`	`The Caesar cipher shifts all the letters in a piece of text by a certain number of places. The key for this cipher is a number which represents the number of places for the shift. So, for example, a key 3 means “shift 3 places” and a key 12 means “shift 12 places”. Note that a key 0 means “do not shift” and a key 25 can either mean “shift 25 places” or “shift one place backwards”. 
-
-![Caesar cipher - Wikipedia](Aspose.Words.cb64041c-7963-4b27-b6bf-9fe1b2d5f916.003.png)
-
-
-***For example***, the word “CEASER” with a shift 10 becomes “MOKCOB”<a name="_hlk75431326"></a>.
-
-- **Symmetric Encryption**
-
-Ceaser cipher is a ***symmetric encryption***, there is only one 
-
-key, and all communicating parties use the same (secret) key for both encryption and decryption of the data. 
-
-1. **Methodology:**
-
-***Ceaser cipher with key hidden in*** ***ciphertext*** is an ***8086-assembly language*** program, in which we perform the modified version Ceaser cipher. The modification is that we encrypt and hide the key itself somewhere in the Ciphertext. This ensures that only the person who has the same program that was used for encrypting the plaintext can decrypt the cipher text.
-
-The key can be hidden anywhere choose by us, it can be start, end, middle, or one digit in start and one digit at the end.
-
-1. **Design:**
-
-After creating the main structure of the program and dividing it in to two segments.
-
-- .data
-- .code
+> - .data
+> - .code
 
 Where data segment is used for declaring initialized data or constants and the .code segment is used for keeping the actual code. Variables and constants declared in .data segment are,
 
 
 |**Variable name**|**Purpose**|
-| :-: | :-: |
-|**str1**|<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p>**For Output messages**</p>|
-|**Choicedisplay**||
-|**str2**||
-|**str3**||
-|**str4**||
-|**str5**||
-|**str6**||
-|**str7**||
-|**str8**||
-|**str9**||
-|**lbk**|for carriage return and newline.|
-|**Inputstring**|for storing the input in the form of a string.|
-|**Outputstring**|for storing the string later to be used as output.|
-|**Keystring**|for storing the key as when it is entered it is stored in the string form.|
-|**Strlen**|for storing the length of the input or output string.|
-|**KeyStrlen**|for storing the length of the key string.|
-|**Decimalpoint**|it is used in the string2number procedure.|
-|**key**|for storing the key.|
-|**bool** |for checking if the user wants to exit the program or not.|
-![](Aspose.Words.cb64041c-7963-4b27-b6bf-9fe1b2d5f916.004.png) 
+| :-: | :-- |
+|**str1**|For Output Display message|
+|**Choicedisplay**|For Output Display message|
+|**str2**|For Output Display message|
+|**str3**|For Output Display message|
+|**str4**|For Output Display message|
+|**str5**|For Output Display message|
+|**str6**|For Output Display message|
+|**str7**|For Output Display message|
+|**str8**|For Output Display message|
+|**str9**|For Output Display message|
+|**lbk**|For carriage return and newline.|
+|**Inputstring**|For storing the input in the form of a string.|
+|**Outputstring**|For storing the string later to be used as output.|
+|**Keystring**|For storing the key as when it is entered it is stored in the string form.|
+|**Strlen**|For storing the length of the input or output string.|
+|**KeyStrlen**|For storing the length of the key string.|
+|**Decimalpoint**|It is used in the string2number procedure.|
+|**key**|For storing the key.|
+|**bool** |For checking if the user wants to exit the program or not.|
+
+![.data](Aspose.Words.cb64041c-7963-4b27-b6bf-9fe1b2d5f916.004.png) 
 
 The Program has been divided into ***multiple procedures***, a series of actions conducted in a certain order or manner. The procedures are,
 
@@ -225,3 +169,8 @@ The program encrypts the Input string in to cipher text.
 **--------------------------------**
 
 ***THE END***
+
+|**Submitted By**       |**Registration no**|
+| :- | :- |
+|Muhammad Hamza Fayyaz|19-CS-20|
+|Muhammad Abdullah Zahid|19-CS-54|
